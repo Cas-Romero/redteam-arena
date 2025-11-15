@@ -1,0 +1,21 @@
+[project]
+name = "redteam-arena"
+version = "0.1.0"
+description = "CLI-based LLM red-teaming engine"
+authors = [{name = "Cas", email = "cas.romero.44@gmail.com"}]
+dependencies = [
+    "transformers>=4.44.0",
+    "torch>=2.3.0",
+    "click>=8.1.0",
+    "rich>=13.0.0"
+]
+
+[project.scripts]
+redteam = "redteam.cli:cli"
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
